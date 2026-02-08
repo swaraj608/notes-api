@@ -18,6 +18,15 @@ const writeNotes = (notes) => {
     fs.writeFileSync(DATA_FILE, JSON.stringify(notes, null, 2)); // 'null, 2' makes the JSON readable
 };
 
+// Custom Logger Middleware
+app.use((req, res, next) => {
+    const time = new Date().toLocaleTimeString();
+    console.log(`[${time}] ${req.method} request to ${req.url}`);
+    
+    // Crucial: This tells Express to move to the next function/route
+    next(); 
+});
+
 // --- ROUTES ---
 
 // 1. GET ALL

@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1770548310618,
+    "title": "My First Backend Note",
+    "content": "I am sending this via a POST request!"
+  },
+  {
+    "id": 1770548489633,
+    "title": "My First Backend Note",
+    "content": "I am sending this via a POST request!"
+  }
+]
